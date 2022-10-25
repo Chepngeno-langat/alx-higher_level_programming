@@ -12,3 +12,4 @@ def read_line(filename=""):
     with open(filename, encoding="UTF8", "r") as file1:
         content = file1.readlines()
         print(content end="")
+    file1.closed
