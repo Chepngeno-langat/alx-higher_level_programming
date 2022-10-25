@@ -9,7 +9,6 @@ def read_line(filename=""):
          fileName: name of the file
     """
 
-    with open(filename, encoding="UTF8", "r") as file1:
-        content = file1.readlines()
+    with open(filename, encoding="UTF8") as file1:
+        content = file1.read()
         print(content end="")
-    file1.closed
