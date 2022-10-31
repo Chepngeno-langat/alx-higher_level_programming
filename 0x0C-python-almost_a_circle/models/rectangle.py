@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """ rectangle module """
+
 from models.base import Base
 
+
 class Rectangle(Base):
-    """ rectangle class """
-    __width = None
+    """class Rectangle"""
     __height = None
+    __width = None
     __x = None
     __y = None
 
@@ -13,7 +15,7 @@ class Rectangle(Base):
         """
         Private instance
 
-        args:
+        Args:
             id:id
         """
         super().__init__(id=id)
@@ -68,13 +70,14 @@ class Rectangle(Base):
 
     def area(self):
         """
-        Function that returns area of rectangle
+            Function that return area of a rectangle
         """
-        return self.height * self.width
+        return self.width * self.height
 
     def display(self):
         """
-        Functions that prints the rectangle instance in stdout
+            Function that print in stdout the instance with the character
+            # by taking care of x and y
         """
         for row in range(self.y):
             print()
@@ -83,7 +86,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """
-        Function that return a string representation of the rectangle
+            Function that return a string representation of the rectangle
         """
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
             self.id,
